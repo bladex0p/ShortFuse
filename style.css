@@ -1,0 +1,297 @@
+body {
+    font-family: "Oswald", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f4f1;
+    color: #373b3c;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+header {
+    background-color: #ffffff;
+    color: #0f1113;
+    padding: 1rem 2rem;
+    text-align: center;
+    height: 330px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 52%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-size: cover;
+    background-position: center;
+    animation: slideBackground 30s infinite;
+    border-radius: 5px;
+    transform: translateZ(-1px) scale(2); /* Create 3D effect */
+    z-index: -1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header.shrink {
+    height: 100px;
+    padding: 0.5rem 1rem;
+}
+
+
+
+.hcont1 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+    padding-left: 4rem;
+    width: 30%;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideBackground {
+    0% {
+        background-image: url('imgs/hero-background/1.jpg');
+    }
+    40% {
+        background-image: url('imgs/hero-background/2.jpg');
+    }
+    55% {
+        background-image: url('imgs/hero-background/3.jpg');
+    }
+    80% {
+        background-image: url('imgs/hero-background/4.jpg');
+    }
+    100% {
+        background-image: url('imgs/hero-background/5.jpg');
+    }
+}
+
+header .hcont1 h1 {
+    font-size: clamp(2rem, 3vw, 3rem); /* Dynamic font size */
+    color: #ffffff;
+    margin: 0;
+    padding-top: 3rem;
+    text-wrap: initial;
+}
+
+header .hcont1 p {
+    font-size: clamp(0.6rem, 0.7vw, 1rem); /* Dynamic font size */
+    color: #ffffff;
+    margin: 0;
+}
+
+header .hcont1 h1 .short {
+    color: #de331f; /* Change this color as needed */
+}
+
+header .hcont1 p {
+    color: #ffffff;
+}
+
+
+.container {
+    padding: 2rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    background-color: #f5f4f1;
+    width: 90%;
+    transform: translateZ(0); /* Ensure container is on the same plane */
+    margin-top: 500px;
+}
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.plan {
+    background: #f5f4f1;
+    border: 1px solid #707774;
+    border-radius: 8px;
+    box-shadow: 11PX 34px 26px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.plan h3 {
+    margin-top: 0;
+    color: #de331f;
+}
+.plan p {
+    margin: 1rem 0;
+}
+
+.plan ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* Add padding to align list items */
+    text-align: right; /* Align list items to the right */
+}
+
+.plan ul li {
+    margin-bottom: 0.5rem; /* Add gap between list items */
+}
+
+.plan p {
+    margin: 3rem 0;
+}
+
+
+.plan button {
+    background-color: #de331f;
+    color: #ccc9c0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.plan button:hover {
+    background-color: #c91c1c;
+}
+.about-us {
+    background-color: #f5f4f1;
+    color: #000000;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+.about-us h2 {
+    text-align: center;
+}
+.about-us p {
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+.why-choose-us {
+    background-color: #f5f4f1;
+    color: #272725;
+    padding: 2rem;
+    margin-top: 10rem;
+    border-radius: 8px;
+}
+.why-choose-us h2 {
+    text-align: center;
+}
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+.why-choose-us ul li {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background-color: #f5f4f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.3rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #646b74;
+    color: #ccc9c0;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+a {
+    color: #ccc9c0;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#de331f; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+.about-us, .plan, .why-choose-us {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn2 1s ease-out forwards;
+}
+
+.about-us {
+    animation-delay: 0.3s;
+}
+
+.plan {
+    animation-delay: 0.5s;
+}
+
+.why-choose-us {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 897px) {
+    header {
+        width: 43%;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .hcont1, .hcont2 {
+        min-width: 0%;
+        padding-left: 0rem;
+    }
+    .container {
+        margin-top: 0;
+    }
+
+    body {
+        perspective: 20px;
+    }
+
+    header .hcont1 p {
+        font-size: clamp(0.6rem, 0.7vw, 1rem);
+        color: #ffffff;
+        margin: 0;
+        width: 368%;
+        text-align: left;
+    }
+
+    header .hcont1 h1 {
+        font-size: clamp(0rem, 9vw, 2rem);
+        color: #ffffff;
+        margin: 0;
+        padding-top: 10px;
+        text-wrap: auto;
+    }
+}
