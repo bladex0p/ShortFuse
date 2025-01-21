@@ -37,7 +37,7 @@ header {
     background-position: center;
     animation: slideBackground 30s infinite;
     border-radius: 5px;
-    transform: translateZ(-1px) scale(2); /* Create 3D effect */
+    transform: translateZ(-1px) scale(2); 
     z-index: -1;
     flex-direction: row;
     align-content: center;
@@ -86,7 +86,7 @@ header.shrink {
 }
 
 header .hcont1 h1 {
-    font-size: clamp(2rem, 3vw, 3rem); /* Dynamic font size */
+    font-size: clamp(2rem, 3vw, 3rem); 
     color: #ffffff;
     margin: 0;
     padding-top: 3rem;
@@ -94,13 +94,13 @@ header .hcont1 h1 {
 }
 
 header .hcont1 p {
-    font-size: clamp(0.6rem, 0.7vw, 1rem); /* Dynamic font size */
+    font-size: clamp(0.6rem, 0.7vw, 1rem); 
     color: #ffffff;
     margin: 0;
 }
 
 header .hcont1 h1 .short {
-    color: #de331f; /* Change this color as needed */
+    color: #de331f; 
 }
 
 header .hcont1 p {
@@ -115,7 +115,7 @@ header .hcont1 p {
     z-index: 1;
     background-color: #f5f4f1;
     width: 90%;
-    transform: translateZ(0); /* Ensure container is on the same plane */
+    transform: translateZ(0); 
     margin-top: 500px;
 }
 .plans {
@@ -143,12 +143,12 @@ header .hcont1 p {
 
 .plan ul {
     list-style-type: disc;
-    padding-left: 1.5rem; /* Add padding to align list items */
-    text-align: right; /* Align list items to the right */
+    padding-left: 1.5rem; 
+    text-align: right; 
 }
 
 .plan ul li {
-    margin-bottom: 0.5rem; /* Add gap between list items */
+    margin-bottom: 0.5rem; 
 }
 
 .plan p {
